@@ -1,0 +1,78 @@
+:root {
+  font-family: Inter, system-ui, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: black;
+  --navbar-height: 75px; /* Example height */
+}
+
+
+body {
+  /* background: linear-gradient(to bottom,  hsla(256, 100%, 2%, 0.822), hsla(277, 86%, 36%, 0.838), hsla(256, 100%, 2%, 0.822)); */
+  background: linear-gradient(to bottom,  hsla(217, 100%, 4%, 0.822), hsla(217, 86%, 36%, 0.838), hsla(218, 100%, 2%, 0.822));
+  color: white;
+  margin: 0;
+  display: flex;
+  /* place-items: center; */
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.navbar {
+  height: var(--navbar-height);
+  font-weight: 500;
+}
+.name{
+  font-weight: 600;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.section{
+  font-weight: 900;
+  font-family: Cormorant Garamond;
+}
+.over{
+  background: linear-gradient(to right, rgb(0, 0, 0, 0.846), rgb(0, 0, 0, 0.759));
+}
+
+@media screen and (min-width: 884px) {
+  .mainContent{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mainContent{
+    grid-template-columns: repeat(2,2fr);
+  }
+}
+
+/* @media screen and (max-width: 768px) {
+  .closeNavbar {
+    position: absolute;
+    top: 1rem;
+    font-size: 30px;
+    right: 1.5rem;
+    color: white;
+    &:hover .icon{
+      color: blue;
+    } 
+  }
+}
+
+.toggleNavbar{
+  .icon{
+    font-size: 30px;
+    color: white;
+  }
+  &:hover.icon{
+    color: blue;
+  }
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
