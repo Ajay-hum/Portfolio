@@ -2,7 +2,7 @@
   "name": "prof",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Ajay-hum.github.io/Portfolio",
+  "homepage": "https://Ajay-hum.github.io/Portfolio/",
   "type": "module",
   "scripts": {
     "dev": "vite",

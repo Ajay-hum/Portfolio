@@ -57,7 +57,7 @@ export default function Home() {
         <span className="mx-4 text-gray-300">MY LATEST WORK</span>
         <hr className="flex-grow border-t border-gray-400 mr-14 md:mr-32" />
       </div>
-      <div className='px-28 items-center justify-between grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'>
+      <div className='px-20 gap-4 items-center justify-between grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'>
         {
           data.map(({ imgSrc, Title, grade, description }, index) => {
             const imagePath = images[imgSrc]; // Get the correct image path
