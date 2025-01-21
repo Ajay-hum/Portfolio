@@ -16,11 +16,19 @@ export default function Home() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('/data.json')
-      .then(response => response.json())
+    const baseUrl = import.meta.env.BASE_URL || '/';
+    fetch(`${baseUrl}data.json`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
       .then(data => setData(data))
       .catch(error => console.error('Error fetching data:', error));
   }, []);
+  
+  
 
   return (
     <section className="z-50 flex-row justify-center items-center gap-12 pt-20 pb-16">
@@ -33,7 +41,7 @@ export default function Home() {
         <img
           src={profile}
           alt="Small Photo"
-          className="absolute z-100 left-3/4 transform -translate-x-1/2 rounded-full border-white shadow-lg bottom-52 w-40 h-40 md:bottom-[90px] md:w-80 md:h-80 border-4 "
+          className="absolute z-100 left-3/4 transform -translate-x-1/2 rounded-full border-white shadow-lg bottom-72 w-40 h-40 md:bottom-[90px] md:w-80 md:h-80 border-4 "
         />
       </div>
       <div className="flex flex-col justify-center items-center mt-20 md:mt-28">
