@@ -7,7 +7,7 @@ import About from './Pages/About';
 import Notfound from './Pages/Notfound';
 import Contact from './Pages/Contact';
 import Projects from './Pages/Projects';
-import Projectsdisp from './Pages/Projectsdisp';
+import Projectsview from './Pages/Projectsview';
 import StoryMe from './Pages/StoryMe';
 import './App.css';
 import DownloadCV from './Components/DownloadCv';
@@ -22,7 +22,7 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path='/projects' element={<Projects/>} />
-        <Route path='/projectview' element={<Projectsdisp />} />
+        <Route path='/projectview' element={<Projectsview />} />
         <Route path='/story' element={<StoryMe />}/>
         <Route path="*" element={<Notfound />} />
       </Routes>
