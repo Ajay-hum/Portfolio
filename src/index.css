@@ -37,41 +37,6 @@ body {
   background: linear-gradient(to right, rgb(0, 0, 0, 0.846), rgb(0, 0, 0, 0.759));
 }
 
-@media screen and (min-width: 884px) {
-  .mainContent{
-    grid-template-columns: repeat(2,1fr);
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .mainContent{
-    grid-template-columns: repeat(2,2fr);
-  }
-}
-
-/* @media screen and (max-width: 768px) {
-  .closeNavbar {
-    position: absolute;
-    top: 1rem;
-    font-size: 30px;
-    right: 1.5rem;
-    color: white;
-    &:hover .icon{
-      color: blue;
-    } 
-  }
-}
-
-.toggleNavbar{
-  .icon{
-    font-size: 30px;
-    color: white;
-  }
-  &:hover.icon{
-    color: blue;
-  }
-} */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
