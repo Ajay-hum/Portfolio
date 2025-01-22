@@ -41,13 +41,13 @@ export default function Home() {
         <img
           src={profile}
           alt="Small Photo"
-          className="absolute z-100 left-3/4 transform -translate-x-1/2 rounded-full border-white shadow-lg bottom-72 w-40 h-40 md:bottom-[90px] md:w-80 md:h-80 border-4 "
+          className="absolute z-100 left-3/4 transform -translate-x-1/2 rounded-full border-white shadow-lg bottom-48 w-40 h-40 md:bottom-[90px] md:w-80 md:h-80 border-4 "
         />
       </div>
       <div className="flex flex-col justify-center items-center mt-20 md:mt-28">
         <div className="flex flex-col gap-6 text-center w-3/4 mt-4 md:mt-8">
-          <h1 className="section text-4xl lg:text-5xl font-extrabold text-white">Bonjour!</h1>
-          <p className="text-white md:text-xl leading-relaxed">
+          <h1 className="section text-4xl lg:text-5xl font-extrabold">Bonjour!</h1>
+          <p className="md:text-xl leading-relaxed">
             I&apos;m Justus - A Frontend developer based in Lagos, Nigeria. With a strong foundation 
             in modern web technologies and a keen eye for design, I specialize in building responsive, 
             user-friendly, and visually appealing web interfaces. With every line of code, I transform innovative 
@@ -56,13 +56,13 @@ export default function Home() {
         </div>
         <div className='mt-4 md:mt-10'>
           <button className='bg-black p-1 rounded-lg border-white border-2'>
-            <Link to="./about" className='section text-1xl'>Know more about Me</Link>
+            <Link to="./about" className='section text-1xl text-white'>Know more about Me</Link>
           </button>
         </div>
       </div>
       <div className="flex items-center mt-14">
         <hr className="flex-grow border-t border-gray-400 ml-14 md:ml-32" />
-        <span className="mx-4 text-gray-300">MY LATEST WORK</span>
+        <span className="mx-4">MY LATEST WORK</span>
         <hr className="flex-grow border-t border-gray-400 mr-14 md:mr-32" />
       </div>
       <div className='px-20 gap-4 items-center justify-between grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'>

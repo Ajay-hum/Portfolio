@@ -22,10 +22,12 @@ export default function About() {
         </div>
       </div>
       <hr className='flex-grow border-t border-gray-400 mb-8 mt-1'/>
-      <div className="bg-gray-100 p-6 rounded-lg shadow-md">
+      <div className="bg-gray-100 p-2 rounded-lg shadow-md flex justify-center mb-16">
         <SkillHistogram />
       </div>
+      <div>
 
+      </div>
     </div>
   )
 }

@@ -25,15 +25,12 @@ export default function Navbar() {
   };
 
   return (
-    <header className="w-full md:pl-4 sm:pl-2 lg:pl-8 pr-6 py-4 md:py-4 flex justify-between items-center shadow-lg fixed bg-black z-50">
+    <header className="writing w-full md:pl-4 sm:pl-2 lg:pl-32 pr-6 py-4 flex justify-between items-center shadow-lg fixed bg-black z-50">
       {/* Logo Section */}
       <nav className="flex items-center pl-10">
         <Link to="/" className="w-12 h-12 rounded-3xl">
           <img src={logo} alt="Icon" />
         </Link>
-        {/* <div className="name text-lg flex ml-2">
-          <h1>JUSTUS ASOGWA</h1>
-        </div> */}
       </nav>
 
       {/* Toggle Menu for Small Screens */}
@@ -43,7 +40,7 @@ export default function Navbar() {
         } transition-transform duration-300 md:static md:translate-x-0 md:flex md:items-center md:mr-36`}
       >
         {/* Links Section */}
-        <ul className="flex flex-col md:flex-row md:space-x-4 p-6 md:p-0">
+        <ul className="flex flex-col md:flex-row md:space-x-4 max-sm:gap-3 p-6 md:p-0">
           {navItems.map((item, index) => (
             <li key={index}>
               <Link

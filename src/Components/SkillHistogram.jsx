@@ -1,34 +1,35 @@
-import { 
-    BarChart, 
-    Bar, 
-    XAxis, 
-    YAxis, 
-    CartesianGrid, 
-    Tooltip, 
-    Legend, 
-    ResponsiveContainer 
+
+import {
+  BarChart, 
+  Bar, 
+  XAxis, 
+  YAxis, 
+  CartesianGrid, 
+  Tooltip, 
+  Legend, 
+  ResponsiveContainer 
 } from 'recharts';
 
 const skillData = [
-  { skill: 'HTML', level: 90, color: 'white' },
-  { skill: 'CSS', level: 85, color: 'white' },
-  { skill: 'JavaScript', level: 80, color: 'white' },
-  { skill: 'React', level: 75, color: 'white' },
-  { skill: 'TailwindCSS', level: 70, color: 'white' },
+  { skill: 'HTML', level: 90 },
+  { skill: 'CSS', level: 65 },
+  { skill: 'JavaScript', level: 90 },
+  { skill: 'React', level: 95 },
+  { skill: 'TailwindCSS', level: 80 },
 ];
 
 export default function SkillHistogram() {
   return (
-    <div style={{ width: '50%', height: 400 }}>
-      <h2 className="text-center text-2xl font-bold mb-4 text-black">Skill Levels</h2>
+    <div style={{ width: '100%', height: 400 }}>
+      <h2 className="text-center text-2xl font-bold mb-4 text-black">My Skill Levels</h2>
       <ResponsiveContainer>
-        <BarChart data={skillData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
+        <BarChart data={skillData} margin={{ top: 20, right: 40, left: 30, bottom: 5 }}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="skill" />
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey="level" fill="color" />
+          <Bar dataKey="level" fill="#8884d8" />
         </BarChart>
       </ResponsiveContainer>
     </div>

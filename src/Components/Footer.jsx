@@ -9,7 +9,7 @@ const footerlinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative items-center bg-black gap-4 p-4 flex-col flex md:flex-row md:justify-between md:px-12 md:py-8 text-white">
+    <footer className="relative items-center bg-black gap-4 p-4 flex-col flex md:flex-row md:justify-between lg:px-20 md:px-12 md:py-8 text-white font-semibold">
       <div>
         <p>&copy; {new Date().getFullYear()} Justus Asogwa</p>
       </div>
