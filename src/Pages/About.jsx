@@ -1,6 +1,6 @@
-
 import profile from '../Assets/profile photo.jpg';
 import SkillHistogram from '../Components/SkillHistogram';
+import SkillPieChart from '../Components/SkillPiechart';
 
 export default function About() {
   return (
@@ -22,12 +22,17 @@ export default function About() {
         </div>
       </div>
       <hr className='flex-grow border-t border-gray-400 mb-8 mt-1'/>
-      <div className="bg-gray-100 p-2 rounded-lg shadow-md flex justify-center mb-16">
-        <SkillHistogram />
-      </div>
-      <div>
-
+      <div className="bg-gray-100 p-10 rounded-lg shadow-md flex justify-center mb-16">
+        {/* Show BarChart only on large screens */}
+        <div className="hidden md:block bg-black w-full lg:px-60">
+          <SkillHistogram />
+        </div>
+        {/* Show PieChart only on small screens */}
+        <div className="block md:hidden w-full p-18">
+          <SkillPieChart />
+        </div>
       </div>
     </div>
-  )
+  );
 }
+

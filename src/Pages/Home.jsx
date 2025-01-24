@@ -41,7 +41,7 @@ export default function Home() {
         <img
           src={profile}
           alt="Small Photo"
-          className="absolute z-100 left-3/4 transform -translate-x-1/2 rounded-full border-white shadow-lg bottom-48 w-40 h-40 md:bottom-[90px] md:w-80 md:h-80 border-4 "
+          className="absolute z-100 left-3/4 transform -translate-x-1/2 rounded-full border-white shadow-lg max-[364px]:bottom-52 max-[767px]:bottom-52 w-40 h-40 md:bottom-[90px] md:w-80 md:h-80 border-4 "
         />
       </div>
       <div className="flex flex-col justify-center items-center mt-20 md:mt-28">

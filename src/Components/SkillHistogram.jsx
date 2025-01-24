@@ -1,4 +1,3 @@
-
 import {
   BarChart, 
   Bar, 
@@ -12,10 +11,11 @@ import {
 
 const skillData = [
   { skill: 'HTML', level: 90 },
-  { skill: 'CSS', level: 65 },
+  { skill: 'CSS', level: 75 },
   { skill: 'JavaScript', level: 90 },
-  { skill: 'React', level: 95 },
+  { skill: 'React.js', level: 95 },
   { skill: 'TailwindCSS', level: 80 },
+  { skill: 'Python', level: 65 }
 ];
 
 export default function SkillHistogram() {
