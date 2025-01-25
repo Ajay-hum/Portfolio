@@ -1,150 +1,46 @@
-import React, { useState } from 'react';
-import image from "../assets/ProjectImgs/contact-image.png";
+import { AiFillInstagram } from "react-icons/ai";
+import { BsTwitterX } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa";
+import { ImLinkedin } from "react-icons/im";
+
+import profile from '../Assets/profile photo.jpg'
+import ContactForm from "../Components/ContactForm";
 
 export default function Contact() {
-  // State for form fields and errors
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-
-  const [formErrors, setFormErrors] = useState({});
-  const [formSuccess, setFormSuccess] = useState(false);
-
-  // Handle form input changes
-  const handleChange = (e) => {
-    const { id, value } = e.target;
-    setFormData({
-      ...formData,
-      [id]: value,
-    });
-  };
-
-  // Form validation
-  const validateForm = () => {
-    const errors = {};
-
-    if (!formData.name.trim()) {
-      errors.name = 'Full Name is required';
-    }
-
-    if (!formData.email.trim()) {
-      errors.email = 'Email is required';
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      errors.email = 'Email address is invalid';
-    }
-
-    if (!formData.subject.trim()) {
-      errors.subject = 'Subject is required';
-    }
-
-    if (!formData.message.trim()) {
-      errors.message = 'Message is required';
-    }
-
-    return errors;
-  };
-
-  // Handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const errors = validateForm();
-
-    if (Object.keys(errors).length === 0) {
-      // If no errors, submit form
-      setFormErrors({});
-      setFormSuccess(true);
-      // Allow Netlify to process the form submission
-      e.target.submit();
-    } else {
-      setFormErrors(errors);
-      setFormSuccess(false);
-    }
-  };
-
-  return (
-    <div className="p-12">
-      <div>
-        {/* Image Section */}
-        <div className="flex justify-center items-center">
-          <img src={image} alt="Contact Illustration" className="max-w-full h-auto" />
+  return ( // Add the return statement here
+    <div className="pt-20 text-black min-w-full">
+      <div className="m-8 md:m-14 md:flex">
+        <div className="flex flex-col gap-3 p-2 xl:px-16 md:pt-16 md:w-1/2 md:h-[30rem]">
+          <h1 className="lg:text-7xl md:text-5xl font-bold text-4xl">contact.</h1>
+          <p className="lg:text-3xl md:text-2xl text-xl">Get with me via social media or send me an email.</p>
+          <div className="flex lg:gap-32 md:gap-20 gap-10 p-4"> {/* Add flex and gap for spacing */}
+            <a href="https://www.linkedin.com/in/justus-asogwa-726427293" target="_blank" rel="noopener noreferrer" className="flex items-center">
+              <ImLinkedin className="hover:text-blue-400 text-4xl sm:text-3xl md:text-4xl lg:text-5xl" />
+              <p className="ml-2 font-semibold text-lg">LinkedIn</p>
+            </a>
+            <a href="https://github.com/Ajay-hum" target="_blank" rel="noopener noreferrer" className="flex items-center">
+              <FaGithub className="hover:text-blue-400 text-4xl sm:text-3xl md:text-4xl lg:text-5xl" />
+              <p className="ml-2 font-semibold text-lg">Github</p>
+            </a>
+          </div>
+          <div className="flex lg:gap-32 md:gap-20 gap-10 p-4">
+            <a href="https://twitter.com/Gentle_soul_26" target="_blank" rel="noopener noreferrer" className="flex items-center">
+              <BsTwitterX className="hover:text-blue-400 text-4xl sm:text-3xl md:text-4xl lg:text-5xl" />
+              <p className="ml-2 font-semibold text-lg">Twitter</p>
+            </a>
+            <a href="https://instagram.com/gentle_soul_26" target="_blank" rel="noopener noreferrer" className="flex items-center">
+              <AiFillInstagram className="hover:text-blue-400 text-4xl sm:text-3xl md:text-4xl lg:text-5xl" />
+              <p className="ml-2 font-semibold text-lg">Instagram</p>
+            </a>
+          </div>
         </div>
-
-        {/* Form Section */}
-        <div>
-          <h2>Contact Us</h2>
-          {formSuccess && <p className="font-medium text-base">Your message has been sent successfully!</p>}
-          <form 
-            className="p-8" 
-            onSubmit={handleSubmit}
-            name="contact"
-            method="POST"
-            data-netlify="true"
-          >
-            <input type="hidden" name="form-name" value="contact" />
-
-            <div className="mb-5">
-              <label htmlFor="name">Full Name</label>
-              <input
-                type="text"
-                className={`h-11 border-black border-4 ${formErrors.name ? 'is-invalid' : ''}`}
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Full Name"
-              />
-              {formErrors.name && <div className="invalid-feedback">{formErrors.name}</div>}
-            </div>
-
-            <div className="mb-5">
-              <label htmlFor="email">Email Address</label>
-              <input
-                type="email"
-                className={`h-11 border-black border-4 ${formErrors.email ? 'is-invalid' : ''}`}
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="example@domain.com"
-              />
-              {formErrors.email && <div className="invalid-feedback">{formErrors.email}</div>}
-            </div>
-
-            <div className="mb-5">
-              <label htmlFor="subject">Subject</label>
-              <input
-                type="text"
-                className={`h-11 border-black border-4 ${formErrors.subject ? 'is-invalid' : ''}`}
-                id="subject"
-                name="subject"
-                value={formData.subject}
-                onChange={handleChange}
-                placeholder="Enter your subject"
-              />
-              {formErrors.subject && <div className="invalid-feedback">{formErrors.subject}</div>}
-            </div>
-
-            <div className="mb-5">
-              <label htmlFor="message">Message</label>
-              <textarea
-                className={`h-11 border-black border-4 ${formErrors.message ? 'is-invalid' : ''}`}
-                id="message"
-                name="message"
-                rows="4"
-                value={formData.message}
-                onChange={handleChange}
-                placeholder="Type your message"
-              ></textarea>
-              {formErrors.message && <div className="invalid-feedback">{formErrors.message}</div>}
-            </div>
-
-            <button type="submit" className="btn btn-primary">Submit</button>
-          </form>
+        <div className="md:w-1/2 lg:p-4 lg:mr-2 max-sm:mt-6 flex md:h-[30rem] items-stretch">
+          <img src={profile} alt="photo" className="w-full h-full object-cover items items-stretch"/>
         </div>
+      </div>
+      <div className="min-h-screen flex items-center justify-center bg-gray-100">
+        <ContactForm />
       </div>
     </div>
   );
-};
+}

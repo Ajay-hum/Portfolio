@@ -17,14 +17,14 @@ export default function About() {
             you&apos;ll find me cooking, gardening or working out in the park.
           </p>
         </div>
-        <div className="md:w-1/2 md:h-[30rem] lg:p-4 lg:mr-14 flex items-stretch">
+        <div className="md:w-1/2 md:h-[30rem] lg:p-4 lg:mr-14 max-sm:mt-6 flex items-stretch">
           <img src={profile} alt="picture" className="h-full w-full object-cover" />
         </div>
       </div>
       <hr className='flex-grow border-t border-gray-400 mb-8 mt-1'/>
       <div className="bg-gray-100 p-10 rounded-lg shadow-md flex justify-center mb-16">
         {/* Show BarChart only on large screens */}
-        <div className="hidden md:block bg-black w-full lg:px-60">
+        <div className="hidden md:block w-full lg:px-60">
           <SkillHistogram />
         </div>
         {/* Show PieChart only on small screens */}
