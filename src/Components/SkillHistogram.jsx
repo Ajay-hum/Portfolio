@@ -14,7 +14,7 @@ const skillData = [
   { skill: 'CSS', level: 75 },
   { skill: 'JavaScript', level: 90 },
   { skill: 'React.js', level: 95 },
-  { skill: 'TailwindCSS', level: 80 },
+  { skill: 'TypeScript', level: 80 },
   { skill: 'Python', level: 65 }
 ];
 

@@ -12,11 +12,10 @@
 body {
   /* background: linear-gradient(to bottom,  hsla(256, 100%, 2%, 0.822), hsla(277, 86%, 36%, 0.838), hsla(256, 100%, 2%, 0.822)); */
   /* background: linear-gradient(to bottom,  hsla(217, 100%, 4%, 0.822), hsla(217, 86%, 36%, 0.838), hsla(218, 100%, 2%, 0.822)); */
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   margin: 0;
   display: flex;
-  /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
 }
@@ -40,6 +39,10 @@ body {
 }
 .over{
   background: linear-gradient(to right, rgb(0, 0, 0, 0.846), rgb(0, 0, 0, 0.759));
+}
+
+.bag{
+  background: rgb(21, 21, 21);
 }
 
 @tailwind base;

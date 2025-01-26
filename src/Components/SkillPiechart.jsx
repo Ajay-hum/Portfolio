@@ -15,11 +15,11 @@ import {
 //   ];
 
   const skillData = [
-    { skill: 'HTML', level: 25 },
-    { skill: 'CSS', level: 10 },
-    { skill: 'JavaScript', level: 25 },
+    { skill: 'HTML', level: 20 },
+    { skill: 'CSS', level: 20 },
+    { skill: 'JavaScript', level: 20 },
     { skill: 'React.js', level: 25 },
-    { skill: 'TailwindCSS', level: 15 },
+    { skill: 'TypeScript', level: 15 }
   ];
   
   // Colors for each skill

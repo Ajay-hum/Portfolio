@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import profile from '../Assets/profile photo.jpg';
 import img from '../Assets/future.jpeg';
 import curateImg from '../Assets/ProjectImgs/curate.png'; // Import your images here
-import { FaGripLinesVertical } from 'react-icons/fa6';
 
 const images = {
   'curate.png': curateImg,
@@ -65,7 +64,7 @@ export default function Home() {
         <span className="mx-4">MY LATEST WORK</span>
         <hr className="flex-grow border-t border-gray-400 mr-14 md:mr-32" />
       </div>
-      <div className='px-20 gap-4 items-center justify-between grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'>
+      <div className='px-10 sm:px-20 gap-4 items-center justify-between grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'>
         {
           data.map(({ imgSrc, Title, grade, description }, index) => {
             const imagePath = images[imgSrc]; // Get the correct image path
@@ -75,24 +74,19 @@ export default function Home() {
                 <div className='bg-gray-500 m-6 h-52 relative overflow-hidden group'>
                   <img src={imagePath} alt={Title} className='h-full w-full object-cover'/>
 
-                  <div className="absolute flex items-start over p-0 justify-center flex-col w-full bottom-0 h-full transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:h-full">
+                  <div className="absolute flex items-center text-center over p-0 justify-center flex-col w-full bottom-0 h-full transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:h-full">
                     <h3 className='text-white font-semibold'>{Title}</h3>
+                    <p className='text-white text-lg'>({grade})</p>
                   </div>
                 </div>
                 <div className='p-4'>
-                  <div className="justify-between">
+                  {/* <div className="justify-between">
                     <h6 className='text-base text-black font-semibold'>
-                      Type: A {grade}
+                      
                     </h6>
-                    <span className='text-base font-semibold items-start transform -translate-y-1'>
-                      <span>
-                        <FaGripLinesVertical className='text-blue-800' />
-                      </span>
-                      BonVoyage.
-                    </span>
-                  </div>
+                  </div> */}
 
-                  <p className='text-xs text-black'>
+                  <p className='text-md text-black'>
                     {description}
                   </p>
                 </div>

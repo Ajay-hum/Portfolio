@@ -9,7 +9,7 @@ export default function About() {
         <div className="flex flex-col gap-3 p-2 xl:px-16 md:pt-16 md:w-1/2 h-64">
           <h3 className="md:text-4xl font-bold text-3xl">About Me.</h3>
           <p className="md:text-2xl text-xl">
-            I am a Front-end developer based in Lagos Nigeria.
+            Frontend Developer - Building Modern, Scalable, and Intuitive Web Applications
           </p>
           <p className="md:text-lg text-base">
             Since 2023, I&apos;ve enjoyed turning complex problems into simple, 
@@ -21,7 +21,6 @@ export default function About() {
           <img src={profile} alt="picture" className="h-full w-full object-cover" />
         </div>
       </div>
-      <hr className='flex-grow border-t border-gray-400 mb-8 mt-1'/>
       <div className="bg-gray-100 p-10 rounded-lg shadow-md flex justify-center mb-16">
         {/* Show BarChart only on large screens */}
         <div className="hidden md:block w-full lg:px-60">
