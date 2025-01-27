@@ -75,7 +75,7 @@ export default function Home() {
                 <div className='bg-gray-500 m-6 h-52 relative overflow-hidden group'>
                   <img src={imagePath} alt={Title} className='h-full w-full object-cover'/>
 
-                  <div className="absolute flex items-center over p-0 justify-center flex-col w-full bottom-0 h-full transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:h-full">
+                  <div className="absolute flex items-center text-center over p-0 justify-center flex-col w-full bottom-0 h-full transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:h-full">
                     <h3 className='text-white font-semibold'>{Title}</h3>
                     <p className='text-white text-lg'>({grade})</p>
                   </div>

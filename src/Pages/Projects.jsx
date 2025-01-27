@@ -31,7 +31,7 @@ export default function Projects() {
         <p className='lg:text-2xl md:text-xl text-lg'>Check out Projects I have worked on.</p>
         <p></p>
       </div>
-      <div className='px-20 gap-4 items-center justify-between grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'>
+      <div className='px-10 md:px-20 gap-4 items-center justify-between grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'>
           {
             data.map(({ imgSrc, Title, grade, description }, index) => {
               const imagePath = images[imgSrc]; // Get the correct image path
