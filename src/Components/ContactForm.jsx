@@ -46,7 +46,7 @@ export default function ContactForm() {
             id="name"
             name="user_name"
             placeholder="Alex Smith"
-            className="bg-white border border-gray-400 rounded-md p-2 focus:ring focus:ring-black focus:outline-none"
+            className="bg-white border text-black border-gray-400 rounded-md p-2 focus:ring focus:ring-black focus:outline-none"
             required
           />
         </div>
@@ -61,7 +61,7 @@ export default function ContactForm() {
             id="email"
             name="user_email"
             placeholder="alexsmith@gmail.com"
-            className="bg-white border border-gray-300 rounded-md p-2 focus:ring focus:ring-black focus:outline-none"
+            className="bg-white border text-black border-gray-300 rounded-md p-2 focus:ring focus:ring-black focus:outline-none"
             required
           />
         </div>
@@ -76,7 +76,7 @@ export default function ContactForm() {
             name="message"
             rows={5}
             placeholder="Your message"
-            className="bg-white border border-gray-300 rounded-md p-2 focus:ring focus:ring-black focus:outline-none"
+            className="bg-white border text-black border-gray-300 rounded-md p-2 focus:ring focus:ring-black focus:outline-none"
             required
           ></textarea>
         </div>

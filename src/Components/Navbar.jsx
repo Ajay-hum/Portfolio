@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import logo from "../Assets/Preview.png";
 
@@ -18,14 +18,32 @@ const navItems = [
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [loading, setLoading] = useState(false); // Loading state
+  const navigate = useNavigate();
 
   // Function to toggle the menu
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Function to handle navigation with loading
+  const handleNavigation = (path) => {
+    setLoading(true); // Start loading
+    setTimeout(() => {
+      navigate(path); // Navigate to the path
+      setLoading(false); // Stop loading after navigation
+    }, 1000); // Simulate loading delay
+  };
+
   return (
     <header className="writing w-full md:pl-4 sm:pl-2 lg:pl-32 pr-6 py-4 flex justify-between items-center shadow-lg fixed bg-black z-50">
+      {/* Loading Spinner */}
+      {loading && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="spinner border-t-4 border-b-4 border-gray-200 rounded-full w-12 h-12 animate-spin"></div>
+        </div>
+      )}
+
       {/* Logo Section */}
       <nav className="flex items-center pl-10">
         <Link to="/" className="w-12 h-12 rounded-3xl">
@@ -40,16 +58,18 @@ export default function Navbar() {
         } transition-transform duration-300 md:static md:translate-x-0 md:flex md:items-center md:mr-36`}
       >
         {/* Links Section */}
-        <ul className="flex flex-col md:flex-row md:space-x-4 max-sm:gap-3 p-6 md:p-0">
+        <ul className="flex flex-col md:flex-row md:space-x-4 max-767px:gap-3 p-6 md:p-0">
           {navItems.map((item, index) => (
             <li key={index}>
-              <Link
-                to={item.link}
+              <button
+                onClick={() => {
+                  setIsMenuOpen(false); // Close menu
+                  handleNavigation(item.link); // Navigate with loading
+                }}
                 className="name hover:text-blue-400 underline"
-                onClick={() => setIsMenuOpen(false)} // Close menu on link click
               >
                 {item.text}
-              </Link>
+              </button>
             </li>
           ))}
         </ul>
@@ -74,13 +94,11 @@ export default function Navbar() {
       </div>
 
       {/* Hamburger Menu Icon */}
-      <div
-        onClick={toggleMenu}
-        className="text-white md:hidden cursor-pointer"
-      >
+      <div onClick={toggleMenu} className="text-white md:hidden cursor-pointer">
         <AiOutlineMenu size={30} />
       </div>
     </header>
   );
 }
+
 

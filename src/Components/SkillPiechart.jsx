@@ -58,7 +58,7 @@ import {
             nameKey="skill"
             cx="50%"
             cy="50%"
-            outerRadius={150}
+            outerRadius={135}
             fill="#8884d8"
             label={renderCustomizedLabel}
             stroke="none" // Removes the stroke
