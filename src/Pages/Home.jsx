@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import profile from '../Assets/profile photo.jpg';
 import img from '../Assets/future.jpeg';
 import curateImg from '../Assets/ProjectImgs/curate.png'; // Import your images here
-import { FaGripLinesVertical } from 'react-icons/fa6';
 
 const images = {
   'curate.png': curateImg,
@@ -27,8 +26,6 @@ export default function Home() {
       .then(data => setData(data))
       .catch(error => console.error('Error fetching data:', error));
   }, []);
-  
-  
 
   return (
     <section className="z-50 flex-row justify-center items-center gap-12 pt-20 pb-16">

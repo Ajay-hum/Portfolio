@@ -84,7 +84,7 @@ export default function Navbar() {
   );
 }
 
-<div className="flex justify-center items-center">
+      {/* <div className="flex justify-center items-center">
         <img 
           src={img} 
           alt="Example" 
@@ -95,4 +95,4 @@ export default function Navbar() {
           alt="Small Photo"
           className="absolute left-3/4 transform -translate-x-1/2 rounded-full border-white shadow-lg max-325px:bottom-10 max-375px:bottom-32 max-414px:bottom-48 max-480px:bottom-52 max-600px:bottom-60 md:bottom-72 lg:bottom-80 xl:bottom-96 w-40 h-40 md:w-80 md:h-80 border-4 "
         />
-      </div>
+      </div> */}

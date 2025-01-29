@@ -63,7 +63,7 @@ export default function Navbar() {
             <li key={index}>
               <button
                 onClick={() => {
-                  setIsMenuOpen(false); // Close menu
+                  setIsMenuOpen(false); // Close menu on click of link
                   handleNavigation(item.link); // Navigate with loading
                 }}
                 className="name hover:text-blue-400 underline"
