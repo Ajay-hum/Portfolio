@@ -64,17 +64,17 @@ export default function Home() {
       </div>
       <div className='p-10 md:px-20 gap-4 items-center justify-between grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'>
         {
-          data.map(({ imgSrc, Title, grade, description }, index) => {
+          data.map(({ imgSrc, name, title, description }, index) => {
             const imagePath = images[imgSrc]; // Get the correct image path
 
             return (
               <div key={index} className='my-3 overflow-hidden bg-white rounded-xl border-black border-2'>
                 <div className='bg-gray-500 m-6 h-52 relative overflow-hidden group'>
-                  <img src={imagePath} alt={Title} className='h-full w-full object-cover'/>
+                  <img src={imagePath} alt={name} className='h-full w-full object-cover'/>
 
                   <div className="absolute flex items-center text-center over p-0 justify-center flex-col w-full bottom-0 h-full transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:h-full">
-                    <h3 className='text-white font-semibold'>{Title}</h3>
-                    <p className='text-white text-lg'>({grade})</p>
+                    <h3 className='text-white font-semibold'>{name}</h3>
+                    <p className='text-white text-lg'>({title})</p>
                   </div>
                 </div>
                 <div className='p-4'>

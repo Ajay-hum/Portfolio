@@ -1,4 +1,3 @@
-// App.jsx
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
@@ -18,16 +17,16 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path='/downloadcv' element={<DownloadCV />}/>
+        <Route path='/downloadcv' element={<DownloadCV />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
-        <Route path='/projects' element={<Projects/>} />
-        <Route path='/projectview' element={<Projectsview />} />
-        <Route path='/story' element={<StoryMe />}/>
+        <Route path='/projects' element={<Projects />} />
+        {/* Dynamic route for project details */}
+        <Route path='/projectview/:projectId' element={<Projectsview />} />
+        <Route path='/story' element={<StoryMe />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
       <Footer />
     </div>
   );
 }
-

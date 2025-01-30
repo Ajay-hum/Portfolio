@@ -38,7 +38,7 @@ export default function Contact() {
           <img src={profile} alt="photo" className="w-full h-full object-cover items items-stretch"/>
         </div>
       </div>
-      <div className="mt-10 h-1/4 md:h-1/3 flex items-center justify-center w-full bag shadow-lg">
+      <div className="mt-10 h-1/4 md:h-1/3 flex items-center justify-center w-full shadow-xl">
         <ContactForm />
       </div>
     </div>
