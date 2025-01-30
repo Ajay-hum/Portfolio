@@ -1,20 +1,23 @@
 [
   {
+    "id": 1,
     "imgSrc": "curate.png",
-    "Title": "Curate Net",
-    "grade": "Decentralized Social Media Platform",
+    "name": "Curate Net",
+    "title": "Decentralized Social Media Platform",
     "description": "A decentralized rewarding social media platform for both users and curators."
   },
   {
+    "id": 2,
     "imgSrc": "curate.png",
-    "Title": "Curate Net",
-    "grade": "Decentralized Social Media Platform",
-    "description": "A decentralized rewarding social media platform for both users and curators."
+    "name": "Project Two",
+    "title": "Another Cool Project",
+    "description": "Description of another great project."
   },
   {
+    "id": 3,
     "imgSrc": "curate.png",
-    "Title": "Curate Net",
-    "grade": "Decentralized Social Media Platform",
+    "name": "Project Three",
+    "title": "Cat Facts Generator",
     "description": "A decentralized rewarding social media platform for both users and curators."
   }
 ]
