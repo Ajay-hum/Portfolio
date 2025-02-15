@@ -13,7 +13,7 @@ export default function Contact() {
         <div className="flex flex-col gap-3 p-2 xl:px-16 md:pt-16 md:w-1/2 md:h-[30rem]">
           <h1 className="lg:text-6xl md:text-4xl font-bold text-3xl">contact.</h1>
           <p className="lg:text-3xl md:text-2xl text-lg">Get with me via social media or send me an email.</p>
-          <div className="flex lg:gap-32 md:gap-20 gap-10 p-4"> {/* Add flex and gap for spacing */}
+          <div className="flex lg:gap-32 md:gap-20 gap-10 p-4"> {/* I added flex and gap for spacing */}
             <a href="https://www.linkedin.com/in/justus-asogwa-726427293" target="_blank" rel="noopener noreferrer" className="flex items-center">
               <ImLinkedin className="hover:text-blue-400 text-4xl sm:text-3xl md:text-4xl lg:text-5xl" />
               <p className="ml-2 font-semibold text-lg">LinkedIn</p>
@@ -44,3 +44,15 @@ export default function Contact() {
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+

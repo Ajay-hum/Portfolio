@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 // import projectsData from '../data/projects.json';
 import curateImg from '../Assets/ProjectImgs/curate.png';
 
@@ -31,11 +31,18 @@ export default function Projectsview() {
   }
 
   return (
-    <div className="container mx-auto px-6 pt-28">
-      <img src={images[project.imgSrc]} alt={project.name} className="w-full h-64 object-cover rounded-lg mb-4" />
-      <h1 className="text-3xl font-bold">{project.name}</h1>
-      <p className="text-2xl">A {project.title}</p>
-      <p className="text-lg">{project.description}</p>
+    <div className="pt-20 pb-10">
+      <div className='flex flex-col justify-center items-center gap-2 m-7 md:m-10'>
+        <div className="md:w-2/3 lg:w-2/4 md:h-96 lg:my-6 pb-12 items-start">
+          <img src={images[project.imgSrc]} alt={project.name} className="w-full md:h-[25rem] h-96 object-cover rounded-lg mb-4" />
+        </div>
+        <div className='flex flex-col gap-3 md:text-start text-center w-3/4 mt-4 md:mt-12'>
+          <h1 className="text-2xl lg:text-3xl font-semibold underline">Name: {project.name}</h1>
+          <p className="text-2xl">Title: {project.title}</p>
+          <a href={project.link} className='text-xl underline'>Link: View Project online</a>
+          <p className="md:text-xl leading-relaxed">{project.description}</p>
+        </div>
+      </div>
     </div>
   );
 }
