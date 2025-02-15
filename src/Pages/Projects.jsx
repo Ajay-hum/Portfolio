@@ -23,10 +23,10 @@ export default function Projects() {
   }, []);
 
   return (
-    <div className='pt-20'>
-      <div className='flex flex-col gap-3 p-2 xl:px-16 md:pt-16 shadow-md h-72 w-full'>
-        <h1 className='lg:text-5xl md:text-3xl font-bold text-2xl'>Portfolio.</h1>
-        <p className='lg:text-2xl md:text-xl text-lg'>Check out Projects I have worked on.</p>
+    <div className='md:pt-20 pt-32'>
+      <div className='flex flex-col gap-3 p-2 xl:px-16 md:pt-16 shadow-md md:h-72 h-40 w-full'>
+        <h1 className='lg:text-5xl md:text-4xl font-bold text-3xl ml-10'>Portfolio.</h1>
+        <p className='lg:text-2xl md:text-xl text-lg ml-10'>Check out Projects I have worked on.</p>
       </div>
       <div className='px-10 md:px-20 gap-4 items-center justify-between grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'>
         {data.map(({ id, imgSrc, name, title, description }) => {

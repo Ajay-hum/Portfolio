@@ -39,7 +39,7 @@ export default function Projectsview() {
         <div className='flex flex-col gap-3 md:text-start text-center w-3/4 mt-4 md:mt-12'>
           <h1 className="text-2xl lg:text-3xl font-semibold underline">Name: {project.name}</h1>
           <p className="text-2xl">Title: {project.title}</p>
-          <a href={project.link} className='text-xl underline'>Link: View Project online</a>
+          <p className='text-xl'>Link: <Link to={project.link} className='text-xl underline text-blue-500'>View Project online</Link></p>
           <p className="md:text-xl leading-relaxed">{project.description}</p>
         </div>
       </div>

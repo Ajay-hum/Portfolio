@@ -12,7 +12,7 @@ export default function About() {
             Frontend Developer - Building Modern, Scalable, and Intuitive Web Applications
           </p>
           <p className="md:text-lg text-base">
-            Since 2023, I&apos;ve enjoyed turning complex problems into simple, 
+            From a tender age, I&apos;ve enjoyed turning complex problems into simple, 
             beautiful and intuitive designs. When I&apos;m not pushing pixels, 
             you&apos;ll find me cooking, gardening or working out in the park.
           </p>

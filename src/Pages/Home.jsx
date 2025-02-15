@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-// Import images
+// Import images for use
 import profile from '../Assets/profile photo.jpg';
 import img from '../Assets/future.jpeg';
-import curateImg from '../Assets/ProjectImgs/curate.png'; // Import your images here
+// Imported project images here
+import curateImg from '../Assets/ProjectImgs/curate.png';
 
 const images = {
   'curate.png': curateImg,
@@ -41,7 +42,7 @@ export default function Home() {
           className="absolute z-100 left-3/4 transform -translate-x-1/2 rounded-full border-white shadow-lg max-480px:bottom-52 max-600px:bottom-52 sm:bottom-52 w-40 h-40 md:bottom-[90px] md:w-80 md:h-80 border-4 "
         />
       </div>
-      <div className="flex flex-col justify-center items-center mt-20 md:mt-28">
+      <div className="w-full h-full flex flex-col justify-center items-center mt-20 md:mt-28">
         <div className="flex flex-col gap-6 text-center w-3/4 mt-4 md:mt-8">
           <h1 className="section text-4xl lg:text-5xl font-extrabold">Bonjour!</h1>
           <p className="md:text-xl leading-relaxed">
@@ -65,7 +66,7 @@ export default function Home() {
       <div className='p-10 md:px-20 gap-4 items-center justify-between grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'>
         {
           data.map(({ imgSrc, name, title, description }, index) => {
-            const imagePath = images[imgSrc]; // Get the correct image path
+            const imagePath = images[imgSrc]; // To  Get the correct image path
 
             return (
               <div key={index} className='my-3 overflow-hidden bg-white rounded-xl border-black border-2'>
