@@ -4,21 +4,24 @@
     "imgSrc": "curate.png",
     "name": "Curate Net",
     "title": "Decentralized Social Media Platform",
-    "description": "A decentralized rewarding social media platform for both users and curators."
+    "link": "https://github.com/Joycrown/CurateNetProject.git",
+    "description": "CurateChain! A decentralized rewarding social media platform for both users and curators."
   },
   {
     "id": 2,
     "imgSrc": "curate.png",
-    "name": "Project Two",
-    "title": "Another Cool Project",
-    "description": "Description of another great project."
+    "name": "Konga Website",
+    "title": "A shopping website",
+    "link": "https://ajay-hum.github.io/Konga-Site/",
+    "description": "I'm Justus - A Frontend developer based in Lagos, Nigeria. With a strong foundation in modern web technologies and a keen eye for design, I specialize in building responsive, user-friendly, and visually appealing web interfaces. With every line of code, I transform innovative ideas into seamless digital experiences that delight users and solve real-world problems.."
   },
   {
     "id": 3,
     "imgSrc": "curate.png",
-    "name": "Project Three",
-    "title": "Cat Facts Generator",
-    "description": "A decentralized rewarding social media platform for both users and curators."
+    "name": "Travel and Tours",
+    "title": "Travel and tours booking website",
+    "link": "https://github.com/Ajay-hum/Travel-and-Tours-website",
+    "description": "Welcome to BonVoyage, your guide to extraordinary places. This application allows users to explore and book exciting travel packages to various destinations around the world."
   }
 ]
 
