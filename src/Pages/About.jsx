@@ -4,9 +4,9 @@ import SkillPieChart from '../Components/SkillPiechart';
 
 export default function About() {
   return (
-    <div className="pt-20">
+    <div className="pt-20 bg-white">
       <div className="m-10 md:m-14 md:flex">
-        <div className="flex flex-col gap-3 p-2 xl:px-16 md:pt-16 mb-10 md:w-1/2 h-64">
+        <div className="flex flex-col gap-3 p-2 xl:px-16 md:pt-16 max-600px:mb-10 md:w-1/2 sm:h-64">
           <h3 className="md:text-4xl font-bold text-3xl">About Me.</h3>
           <p className="md:text-2xl text-xl">
             Frontend Developer - Building Modern, Scalable, and Intuitive Web Applications

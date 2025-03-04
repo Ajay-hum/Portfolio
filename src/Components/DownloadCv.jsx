@@ -3,9 +3,9 @@ import CV from "../Assets/A Jay's CV.pdf";
 
 export default function DownloadCV() {
   return (
-    <section className="pt-20">
-      <div className="my-10 mx-10">
-        <h2 className="text-3xl font-bold">Download My CV</h2>
+    <section className="pt-20 bg-white">
+      <div className="w-full flex flex-col justify-center items-center mt-20 md:mt-28">
+      <h2 className="text-3xl font-bold">Download My CV</h2>
         <a 
           href={CV} 
           download 

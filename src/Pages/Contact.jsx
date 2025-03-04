@@ -8,7 +8,7 @@ import ContactForm from "../Components/ContactForm";
 
 export default function Contact() {
   return (
-    <div className="pt-20 md:px-8">
+    <div className="pt-20 md:px-8 bg-white">
       <div className="m-8 md:m-14 md:flex">
         <div className="flex flex-col gap-3 p-2 xl:px-16 md:pt-16 md:w-1/2 md:h-[30rem]">
           <h1 className="lg:text-6xl md:text-4xl font-bold text-3xl">contact.</h1>

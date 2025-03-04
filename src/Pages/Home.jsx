@@ -29,7 +29,7 @@ export default function Home() {
   }, []);
 
   return (
-    <section className="z-50 flex-row justify-center items-center gap-12 pt-20 pb-16">
+    <section className="z-50 bg-white flex-row justify-center items-center gap-12 pt-20">
       <div className="flex justify-center items-center">
         <img 
           src={img} 
@@ -43,7 +43,7 @@ export default function Home() {
         />
       </div>
       <div className="w-full h-full flex flex-col justify-center items-center mt-20 md:mt-28">
-        <div className="flex flex-col gap-6 text-center w-3/4 mt-4 md:mt-8">
+        <div className="flex flex-col gap-6 text-center w-4/5 mt-4 md:mt-8">
           <h1 className="section text-4xl lg:text-5xl font-extrabold">Bonjour!</h1>
           <p className="md:text-xl leading-relaxed">
             I&apos;m Justus - A Frontend developer based in Lagos, Nigeria. With a strong foundation 
@@ -63,7 +63,7 @@ export default function Home() {
         <span className="mx-4">MY LATEST WORK</span>
         <hr className="flex-grow border-t border-gray-400 mr-14 md:mr-32" />
       </div>
-      <div className='p-10 md:px-20 gap-4 items-center justify-between grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'>
+      <div className='pt-10 px-6 md:px-20 gap-4 items-center justify-between grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'>
         {
           data.map(({ imgSrc, name, title, description }, index) => {
             const imagePath = images[imgSrc]; // To  Get the correct image path

@@ -22,7 +22,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative items-center bg-black gap-4 p-4 flex-col flex md:flex-row md:justify-between lg:px-20 md:px-12 md:py-8 text-white font-semibold">
+    <footer className="relative top-36 items-center bg-black gap-4 p-4 flex-col flex md:flex-row md:justify-between lg:px-20 md:px-12 md:py-8 text-white font-semibold">
       {/* Loading Spinner */}
       {loading && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
