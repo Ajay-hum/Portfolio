@@ -1,9 +1,9 @@
 import { AiOutlineDownload } from "react-icons/ai";
-import CV from "../Assets/A Jay's CV.pdf";
+import CV from "../Assets/Ajay's FED CV.pdf";
 
 export default function DownloadCV() {
   return (
-    <section className="pt-20 bg-white">
+    <section className="pt-20 bg-white w-full h-full">
       <div className="w-full flex flex-col justify-center items-center mt-20 md:mt-28">
       <h2 className="text-3xl font-bold">Download My CV</h2>
         <a 

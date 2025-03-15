@@ -59,9 +59,9 @@ export default function Home() {
         </div>
       </div>
       <div className="flex items-center mt-14">
-        <hr className="flex-grow border-t border-gray-400 ml-14 md:ml-32" />
+        <hr className="flex-grow border-t border-gray-600 ml-14 md:ml-32" />
         <span className="mx-4">MY LATEST WORK</span>
-        <hr className="flex-grow border-t border-gray-400 mr-14 md:mr-32" />
+        <hr className="flex-grow border-t border-gray-600 mr-14 md:mr-32" />
       </div>
       <div className='pt-10 px-6 md:px-20 gap-4 items-center justify-between grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'>
         {
