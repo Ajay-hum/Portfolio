@@ -1,27 +1,51 @@
 [
   {
     "id": 1,
-    "imgSrc": "curate.png",
-    "name": "Curate Net",
+    "imgSrc": "crnt.png",
+    "name": "CurateNet",
     "title": "Decentralized Social Media Platform",
     "link": "https://github.com/Joycrown/CurateNetProject.git",
-    "description": "CurateChain! A decentralized rewarding social media platform for both users and curators."
+    "description": "CurateNet is a revolutionary decentralized social media platform that leverages blockchain technology to create a self-sustaining ecosystem of high-quality content creation, curation and community engagement. By introducing a unique token-based economy, CurateNet aligns the interests of content creators, curators and consumers, addressing the shortcomings of traditional social media platforms while incorporating familiar features for a seamless user experience. Built using Typescript and TailwindCSS for styling."
   },
   {
     "id": 2,
-    "imgSrc": "curate.png",
-    "name": "Konga Website",
-    "title": "A shopping website",
+    "imgSrc": "crnt.png",
+    "name": "G.S.Bookstore",
+    "title": "Online Bookstore",
     "link": "https://ajay-hum.github.io/Konga-Site/",
-    "description": "I'm Justus - A Frontend developer based in Lagos, Nigeria. With a strong foundation in modern web technologies and a keen eye for design, I specialize in building responsive, user-friendly, and visually appealing web interfaces. With every line of code, I transform innovative ideas into seamless digital experiences that delight users and solve real-world problems.."
+    "description": "G.S.Bookstore! G.S. Bookstore is a React.js-powered online bookstore designed for book lovers to browse, search, and categorize their favorite reads effortlessly. Featuring a user-friendly interface, it allows customers to add books to carts, explore daily deals, and filter through different genres. Built with SCSS for styling, the platform boasts a clean, modern design that enhances readability and ease of navigation. With a seamless shopping experience, responsive layout, and smooth animations, G.S. Bookstore makes discovering and purchasing books an enjoyable process for every reader."
   },
   {
     "id": 3,
-    "imgSrc": "curate.png",
-    "name": "Travel and Tours",
+    "imgSrc": "crnt.png",
+    "name": "BonVoyage",
     "title": "Travel and tours booking website",
     "link": "https://github.com/Ajay-hum/Travel-and-Tours-website",
-    "description": "Welcome to BonVoyage, your guide to extraordinary places. This application allows users to explore and book exciting travel packages to various destinations around the world."
+    "description": "Welcome to BonVoyage, your guide to extraordinary places. BonVoyage is a dynamic React.js-based travel and tour booking platform that helps users discover, plan, and book trips to breathtaking destinations. The website provides essential details on locations, pricing, and accommodations, allowing users to plan trips effortlessly. It features an interactive search and filtering system, enabling travelers to find destinations based on budget, interests, and preferences. Designed with SCSS for a visually appealing and responsive interface, BonVoyage offers smooth navigation and a sleek UI, making travel planning a seamless and enjoyable experience."
+  },
+  {
+    "id": 4,
+    "imgSrc": "crnt.png",
+    "name": "Fashion Hub",
+    "title": "Themed Blog Website",
+    "link": "https://ajay-hum.github.io/Konga-Site/",
+    "description": "Welcome to FashionHub Blog website! Built with React.js and Bootstrap, Fashion Hub is a stylish and responsive blog website that delivers engaging content on fashion trends, styling tips, and industry news. It features dynamic blog posts, category filtering, and a smooth user experience, making it an ideal platform for fashion enthusiasts and bloggers. The website’s modern design ensures accessibility across different devices, providing seamless navigation. Integrated pagination and search functionality enhance the reading experience. With its structured layout and aesthetically pleasing UI, Fashion Hub serves as an interactive platform for discovering and sharing fashion insights."
+  },
+  {
+    "id": 5,
+    "imgSrc": "crnt.png",
+    "name": "Cat Facts",
+    "title": "Pseudorandom Cat Facts Generator",
+    "link": "https://ajay-hum.github.io/Cat-Facts-Generator/",
+    "description": "Developed using HTML, CSS, and JavaScript, Cat Facts is a fun web application that generates random cat-related facts at the click of a button. It pulls from a collection of interesting feline trivia to entertain and educate cat lovers with every interaction. The application dynamically fetches and displays facts, ensuring users always receive new information. Simple animations and a clean UI make the experience more enjoyable. Whether you’re a casual user or a devoted cat enthusiast, this app provides an easy way to learn fun facts about your favorite furry companions."
+  },
+  {
+    "id": 6,
+    "imgSrc": "crnt.png",
+    "name": "EncodeDecode",
+    "title": "Encoder and Decoder Function",
+    "link": "https://ajay-hum.github.io/Encoder-Decoder--Javascript/",
+    "description": "This JavaScript-based project provides an interactive tool for encoding and decoding text using a simple encryption algorithm. It allows users to securely transform their messages and retrieve the original text when needed. Built with HTML, CSS, and JavaScript, it offers a clean and intuitive interface for experimenting with encoding techniques. The tool is designed to demonstrate basic cryptographic principles in an accessible way. Users can input any text, encode it into an unreadable format, and then decode it back with a simple function. This project serves as a great introduction to text manipulation and encryption concepts in JavaScript"
   }
 ]
 

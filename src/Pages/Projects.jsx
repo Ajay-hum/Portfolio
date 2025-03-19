@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import curateImg from '../Assets/ProjectImgs/curate.png';
+import curateImg from '../Assets/ProjectImgs/crnt.png';
 
 const images = {
-  'curate.png': curateImg,
+  'crnt.png': curateImg,
 };
 
 export default function Projects() {
@@ -42,7 +42,7 @@ export default function Projects() {
                 </div>
               </div>
               <div className='p-4'>
-                <p className='text-md text-black'>{description}</p>
+                <p className='text-md text-black'>{description.slice(0, 100)}...</p>
                 {/* Add Link to project details */}
                 <Link to={`/projectview/${id}`} className="text-blue-500 mt-2 block">
                   View Details

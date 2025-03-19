@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 import profile from '../Assets/profile photo.jpg';
 import img from '../Assets/future.jpeg';
 // Imported project images here
-import curateImg from '../Assets/ProjectImgs/curate.png';
+import curateImg from '../Assets/ProjectImgs/crnt.png';
 
 const images = {
-  'curate.png': curateImg,
+  'crnt.png': curateImg,
   // Add more images as needed
 };
 
@@ -65,11 +65,11 @@ export default function Home() {
       </div>
       <div className='pt-10 px-6 md:px-20 gap-4 items-center justify-between grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'>
         {
-          data.map(({ imgSrc, name, title, description }, index) => {
+          data.slice(0, 3).map(({ id, imgSrc, name, title, description }, index) => {
             const imagePath = images[imgSrc]; // To  Get the correct image path
-
+            
             return (
-              <div key={index} className='my-3 overflow-hidden bg-white rounded-xl border-black border-2'>
+              <Link to={`/projectview/${id}`} key={index} className='my-3 overflow-hidden bg-white rounded-xl border-black border-2'>
                 <div className='bg-gray-500 m-6 h-52 relative overflow-hidden group'>
                   <img src={imagePath} alt={name} className='h-full w-full object-cover'/>
 
@@ -79,17 +79,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div className='p-4'>
-                  {/* <div className="justify-between">
-                    <h6 className='text-base text-black font-semibold'>
-                      
-                    </h6>
-                  </div> */}
-
                   <p className='text-xs text-black'>
-                    {description}
+                    {description.slice(0, 100)}...
+                    {/* <Link to={`/projectsview/${id}`} className="text-blue-500">  See more</Link> */}
                   </p>
                 </div>
-              </div>
+              </Link>
             );
           })
         }
