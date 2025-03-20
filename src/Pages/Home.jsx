@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 // Import images for use
 import profile from '../Assets/profile photo.jpg';
@@ -26,12 +28,17 @@ export default function Home() {
       })
       .then(data => setData(data))
       .catch(error => console.error('Error fetching data:', error));
+
+      AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        once: false, // Whether animation should happen only once
+      })
   }, []);
 
   return (
     <section className="z-50 bg-white flex-row justify-center items-center gap-12 pt-20">
       <div className="flex justify-center items-center">
-        <img 
+        <img
           src={img} 
           alt="Example" 
           className="h-72 md:h-96 w-full" 
@@ -43,7 +50,7 @@ export default function Home() {
         />
       </div>
       <div className="w-full h-full flex flex-col justify-center items-center mt-20 md:mt-28">
-        <div className="flex flex-col gap-6 text-center w-4/5 mt-4 md:mt-8">
+        <div data-aos="fade-up" data-aos-delay="500" className="flex flex-col gap-6 text-center px-3 md:w-4/5 mt-4 md:mt-8">
           <h1 className="section text-4xl lg:text-5xl font-extrabold">Bonjour!</h1>
           <p className="md:text-xl leading-relaxed">
             I&apos;m Justus - A Frontend developer based in Lagos, Nigeria. With a strong foundation 
@@ -52,7 +59,7 @@ export default function Home() {
             ideas into seamless digital experiences that delight users and solve real-world problems.
           </p>
         </div>
-        <div className='mt-4 md:mt-10'>
+        <div data-aos="fade-up" className='mt-4 md:mt-10'>
           <button className='bg-black p-1 rounded-lg border-white border-2'>
             <Link to="./about" className='section text-1xl text-white'>Know more about Me</Link>
           </button>
@@ -69,7 +76,7 @@ export default function Home() {
             const imagePath = images[imgSrc]; // To  Get the correct image path
             
             return (
-              <Link to={`/projectview/${id}`} key={index} className='my-3 overflow-hidden bg-white rounded-xl border-black border-2'>
+              <Link to={`/projectview/${id}`} key={index} data-aos="fade-right" className='my-3 overflow-hidden bg-white rounded-xl border-black border-2'>
                 <div className='bg-gray-500 m-6 h-52 relative overflow-hidden group'>
                   <img src={imagePath} alt={name} className='h-full w-full object-cover'/>
 
@@ -80,8 +87,7 @@ export default function Home() {
                 </div>
                 <div className='p-4'>
                   <p className='text-xs text-black'>
-                    {description.slice(0, 100)}...
-                    {/* <Link to={`/projectsview/${id}`} className="text-blue-500">  See more</Link> */}
+                    {description.slice(0, 100)}... <span className='text-blue-500 font-semibold'>See More</span>
                   </p>
                 </div>
               </Link>

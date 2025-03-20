@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
-import logo from "../Assets/Preview.png";
-
-// Importing icons for use
 import { ImLinkedin } from "react-icons/im";
 import { FaGithub } from "react-icons/fa";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+
+// Importing images for use
+import logo from "../Assets/Preview.png";
 
 const navItems = [
   { link: "/", text: "Home" },

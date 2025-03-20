@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import AOS from "aos"
+import "aos/dist/aos.css"
+
 import curateImg from '../Assets/ProjectImgs/crnt.png';
 
 const images = {
@@ -20,11 +23,16 @@ export default function Projects() {
       })
       .then(data => setData(data))
       .catch(error => console.error('Error fetching data:', error));
-  }, []);
+      
+      AOS.init({
+        duration: 1000,
+        once: false
+      })
+  },[]);
 
   return (
     <div className='md:pt-20 pt-32 bg-white'>
-      <div className='flex flex-col gap-3 p-2 xl:px-16 md:pt-16 shadow-md md:h-72 h-40 w-full'>
+      <div data-aos="fade-right" data-aos-duration="800" className='flex flex-col gap-3 p-2 xl:px-16 md:pt-16 shadow-md md:h-72 h-40 w-full'>
         <h1 className='lg:text-5xl md:text-4xl font-bold text-3xl ml-10'>Portfolio.</h1>
         <p className='lg:text-2xl md:text-xl text-lg ml-10'>Check out Projects I have worked on.</p>
       </div>
@@ -33,7 +41,7 @@ export default function Projects() {
           const imagePath = images[imgSrc]; 
 
           return (
-            <div key={id} className='my-3 overflow-hidden bg-white rounded-xl border-black border-2'>
+            <div key={id} data-aos="fade-up" className='my-3 overflow-hidden bg-white rounded-xl border-black border-2'>
               <div className='bg-gray-500 m-6 h-52 relative overflow-hidden group'>
                 <img src={imagePath} alt={name} className='h-full w-full object-cover' />
                 <div className="absolute flex items-center text-center over p-0 justify-center flex-col w-full bottom-0 h-full transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:h-full">
@@ -44,7 +52,7 @@ export default function Projects() {
               <div className='p-4'>
                 <p className='text-md text-black'>{description.slice(0, 100)}...</p>
                 {/* Add Link to project details */}
-                <Link to={`/projectview/${id}`} className="text-blue-500 mt-2 block">
+                <Link to={`/projectview/${id}`} className="text-blue-500 mt-2 block font-semibold">
                   View Details
                 </Link>
               </div>

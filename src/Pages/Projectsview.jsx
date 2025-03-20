@@ -35,10 +35,10 @@ export default function Projectsview() {
         <div className="md:w-2/3 lg:w-2/4 md:h-96 lg:my-6 pb-12 items-start">
           <img src={images[project.imgSrc]} alt={project.name} className="w-full md:h-[25rem] h-96 object-cover rounded-lg mb-4" />
         </div>
-        <div className='flex flex-col gap-3 md:text-start sm:text-center w-3/4 mt-4 md:mt-12'>
-          <h1 className="text-2xl lg:text-3xl font-semibold underline">Name: {project.name}</h1>
-          <p className="text-2xl">Title: {project.title}</p>
-          <p className='text-xl'>Link: <Link to={project.link} className='text-xl underline text-blue-500'>View Project online</Link></p>
+        <div className='flex flex-col gap-3 md:text-start sm:text-center md:w-4/5 w-full mt-4 md:mt-12'>
+          <h1 className="text-2xl lg:text-3xl font-semibold underline text-center">{project.name}</h1>
+          <p className="text-2xl text-center">{project.title}</p>
+          <p className='text-xl text-center'><Link to={project.link} className='text-xl underline text-blue-500'>View Project online</Link></p>
           <p className="md:text-xl leading-relaxed">{project.description}</p>
         </div>
       </div>
