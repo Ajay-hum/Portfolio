@@ -4,17 +4,13 @@ import AOS from "aos"
 import "aos/dist/aos.css"
 
 // Import images for use
-import profile from "../Assets/profile photo.jpg";
+import profile from '../Assets/profile photo.jpg';
 import img from '../Assets/future.jpeg';
 // Imported project images here
-import curateImg from "../Assets/ProjectImgs/crnt.png";
-import bookImg from "../Assets/ProjectImgs/onlbks.png"
-import travImg from "../Assets/ProjectImgs/travel.png"
+import curateImg from '../Assets/ProjectImgs/crnt.png';
 
 const images = {
-  "crnt.png": curateImg,
-  "onlbks.png": bookImg,
-  "travel.png": travImg,
+  'crnt.png': curateImg,
   // Add more images as needed
 };
 

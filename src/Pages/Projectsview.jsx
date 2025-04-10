@@ -1,9 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import curateImg from '../Assets/ProjectImgs/crnt.png';
+import curateImg from "../Assets/ProjectImgs/crnt.png";
+import bookImg from "../Assets/ProjectImgs/onlbks.png"
+import travImg from "../Assets/ProjectImgs/travel.png"
 
 const images = {
-  'crnt.png': curateImg,
+  "crnt.png": curateImg,
+  "onlbks.png": bookImg,
+  "travel.png": travImg,
 };
 
 export default function Projectsview() {

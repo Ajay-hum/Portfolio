@@ -9,7 +9,7 @@
   },
   {
     "id": 2,
-    "imgSrc": "crnt.png",
+    "imgSrc": "onlbks.png",
     "name": "G.S.Bookstore",
     "title": "Online Bookstore",
     "link": "https://ajay-hum.github.io/Konga-Site/",
@@ -17,7 +17,7 @@
   },
   {
     "id": 3,
-    "imgSrc": "crnt.png",
+    "imgSrc": "travel.png",
     "name": "BonVoyage",
     "title": "Travel and tours booking website",
     "link": "https://github.com/Ajay-hum/Travel-and-Tours-website",

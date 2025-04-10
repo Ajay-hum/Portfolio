@@ -3,10 +3,15 @@ import { Link } from 'react-router-dom';
 import AOS from "aos"
 import "aos/dist/aos.css"
 
-import curateImg from '../Assets/ProjectImgs/crnt.png';
+import curateImg from "../Assets/ProjectImgs/crnt.png";
+import bookImg from "../Assets/ProjectImgs/onlbks.png"
+import travImg from "../Assets/ProjectImgs/travel.png"
+
 
 const images = {
-  'crnt.png': curateImg,
+  "crnt.png": curateImg,
+  "onlbks.png": bookImg,
+  "travel.png": travImg,
 };
 
 export default function Projects() {
