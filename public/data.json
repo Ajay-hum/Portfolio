@@ -25,7 +25,7 @@
   },
   {
     "id": 4,
-    "imgSrc": "crnt.png",
+    "imgSrc": "blogweb.png",
     "name": "Fashion Hub",
     "title": "Themed Blog Website",
     "link": "https://ajay-hum.github.io/Konga-Site/",
@@ -41,7 +41,7 @@
   },
   {
     "id": 6,
-    "imgSrc": "crnt.png",
+    "imgSrc": "encdec.png",
     "name": "EncodeDecode",
     "title": "Encoder and Decoder Function",
     "link": "https://ajay-hum.github.io/Encoder-Decoder--Javascript/",

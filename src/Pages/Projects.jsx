@@ -6,12 +6,17 @@ import "aos/dist/aos.css"
 import curateImg from "../Assets/ProjectImgs/crnt.png";
 import bookImg from "../Assets/ProjectImgs/onlbks.png"
 import travImg from "../Assets/ProjectImgs/travel.png"
+import endeImg from "../Assets/ProjectImgs/encdec.png"
+import blwImg from "../Assets/ProjectImgs/blogweb.png"
+
 
 
 const images = {
   "crnt.png": curateImg,
   "onlbks.png": bookImg,
   "travel.png": travImg,
+  "encdec.png": endeImg,
+  "blogweb.png": blwImg,
 };
 
 export default function Projects() {
