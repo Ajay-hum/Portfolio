@@ -1,106 +1,122 @@
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import AOS from "aos"
-import "aos/dist/aos.css"
-
-// Import images for use
-import profile from "../Assets/profile photo.jpg";
-import img from '../Assets/future.jpeg';
-// Imported project images here
-import curateImg from "../Assets/ProjectImgs/crnt.png";
-import bookImg from "../Assets/ProjectImgs/onlbks.png"
-import travImg from "../Assets/ProjectImgs/travel.png"
-import endeImg from "../Assets/ProjectImgs/encdec.png"
-import blwImg from "../Assets/ProjectImgs/blogweb.png"
-
-const images = {
-  "crnt.png": curateImg,
-  "onlbks.png": bookImg,
-  "travel.png": travImg,
-  "encdec.png": endeImg,
-  "blogweb.png": blwImg,
-  // Add more images as needed
-};
+import React from 'react';
+import { ArrowRight, Download, Github, Linkedin, Mail } from 'lucide-react';
 
 export default function Home() {
-  const [data, setData] = useState([]);
+  const handleContactClick = () => {
+    const element = document.querySelector('#contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
-  useEffect(() => {
-    const baseUrl = import.meta.env.BASE_URL || '/';
-    fetch(`${baseUrl}data.json`)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then(data => setData(data))
-      .catch(error => console.error('Error fetching data:', error));
-
-      AOS.init({
-        duration: 1000, // Animation duration in milliseconds
-        once: false, // Whether animation should happen only once
-      })
-  }, []);
+  const handleResumeDownload = () => {
+    // Create a dummy PDF link for demonstration
+    const link = document.createElement('a');
+    link.href = '/resume-justus-asogwa.pdf';
+    link.download = 'Justus-Asogwa-Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
-    <section className="z-50 bg-white flex-row justify-center items-center gap-12 pt-20">
-      <div className="flex justify-center items-center">
-        <img
-          src={img} 
-          alt="Example" 
-          className="h-72 md:h-96 w-full" 
-        />
-        <img
-          src={profile}
-          alt="Small Photo"
-          className="absolute z-100 left-3/4 transform -translate-x-1/2 rounded-full border-white shadow-lg max-480px:bottom-52 max-600px:bottom-52 sm:bottom-52 w-40 h-40 md:bottom-[90px] md:w-80 md:h-80 border-4 "
-        />
-      </div>
-      <div className="w-full h-full flex flex-col justify-center items-center mt-20 md:mt-28">
-        <div data-aos="fade-up" className="flex flex-col gap-6 text-center px-3 md:w-4/5 mt-4 md:mt-8">
-          <h1 className="section text-4xl lg:text-5xl font-extrabold">Bonjour!</h1>
-          <p className="md:text-xl leading-relaxed">
-            I&apos;m Justus - A Frontend developer based in Lagos, Nigeria. With a strong foundation 
-            in modern web technologies and a keen eye for design, I specialize in building responsive, 
-            user-friendly, and visually appealing web interfaces. With every line of code, I transform innovative 
-            ideas into seamless digital experiences that delight users and solve real-world problems.
-          </p>
-        </div>
-        <div data-aos="fade-up" className='mt-4 md:mt-10'>
-          <button className='bg-black p-1 rounded-lg border-white border-2'>
-            <Link to="./about" className='section text-1xl text-white'>Know more about Me</Link>
-          </button>
-        </div>
-      </div>
-      <div className="flex items-center mt-14">
-        <hr className="flex-grow border-t border-gray-600 ml-14 md:ml-32" />
-        <span className="mx-4">MY LATEST WORK</span>
-        <hr className="flex-grow border-t border-gray-600 mr-14 md:mr-32" />
-      </div>
-      <div className='pt-10 px-6 md:px-20 gap-4 items-center justify-between grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'>
-        {
-          data.slice(0, 3).map(({ id, imgSrc, name, title, description }, index) => {
-            const imagePath = images[imgSrc]; // To Get the correct image path
+    <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-4 sm:px-20">
+      <div className="container mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Content */}
+          <div className="text-center lg:text-left" data-aos="fade-right">
+            <div className="inline-flex items-center px-4 py-2 bg-blue-50 dark:bg-blue-900/30 rounded-full text-blue-600 dark:text-blue-400 text-sm font-medium mb-6">
+              <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+              Available for hire
+            </div>
             
-            return (
-              <Link to={`/projectview/${id}`} key={index} data-aos="fade-right" className='my-3 overflow-hidden bg-white rounded-xl border-black border-2'>
-                <div className='bg-gray-500 m-6 h-52 relative overflow-hidden group'>
-                  <img src={imagePath} alt={name} className='h-full w-full object-cover'/>
-                  <div className="absolute flex items-center text-center over p-0 justify-center flex-col w-full bottom-0 h-full transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:h-full">
-                    <h3 className='text-white font-semibold'>{name}</h3>
-                    <p className='text-white text-lg'>({title})</p>
-                  </div>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+              Hi, I&apos;m{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                Justus Asogwa
+              </span>
+            </h1>
+            
+            <h2 className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-6 font-medium">
+              Frontend Developer & UI/UX Enthusiast
+            </h2>
+            
+            <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl">
+              I craft beautiful, responsive web applications with modern technologies like React.js and Tailwind CSS. 
+              Passionate about creating seamless user experiences and bringing innovative ideas to life.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <button
+                onClick={handleContactClick}
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+              >
+                Hire Me
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              
+              <button
+                onClick={handleResumeDownload}
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 hover:border-blue-500 dark:hover:border-blue-400"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Download CV
+              </button>
+            </div>
+            
+            {/* Social Links */}
+            <div className="flex justify-center lg:justify-start space-x-6">
+              <a
+                href="https://github.com/Ajay-hum"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                aria-label="GitHub"
+              >
+                <Github className="h-6 w-6 text-gray-700 dark:text-gray-300" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/justus-asogwa-726427293"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-6 w-6 text-gray-700 dark:text-gray-300" />
+              </a>
+              <a
+                href="mailto:justusasogwa9@gmail.com"
+                className="p-3 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                aria-label="Email"
+              >
+                <Mail className="h-6 w-6 text-gray-700 dark:text-gray-300" />
+              </a>
+            </div>
+          </div>
+          
+          {/* Image */}
+          <div className="flex justify-center lg:justify-end" data-aos="fade-left">
+            <div className="relative">
+              <div className="w-80 h-80 sm:w-96 sm:h-96 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full p-1">
+                <div className="w-full h-full bg-white dark:bg-gray-900 rounded-full flex items-center justify-center">
+                  <img
+                    src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=800"
+                    alt="Justus Asogwa"
+                    className="w-72 h-72 sm:w-88 sm:h-88 object-cover rounded-full"
+                  />
                 </div>
-                <div className='p-4'>
-                  <p className='text-xs text-black'>
-                    {description.slice(0, 100)}... <span className='text-blue-500 font-semibold'>See More</span>
-                  </p>
-                </div>
-              </Link>
-            );
-          })
-        }
+              </div>
+              
+              {/* Floating elements */}
+              <div className="absolute -top-4 -right-4 w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center animate-bounce">
+                <span className="text-2xl">⚡</span>
+              </div>
+              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-green-400 rounded-full flex items-center justify-center animate-pulse">
+                <span className="text-2xl">🚀</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
