@@ -1,5 +1,8 @@
 import React from 'react';
 import { ArrowRight, Download, Github, Linkedin, Mail } from 'lucide-react';
+import resumePDF from '../Assets/resume-justus-asogwa.pdf'; // ✅ import here too
+import img from '../Assets/image.png'
+
 
 export default function Home() {
   const handleContactClick = () => {
@@ -7,16 +10,6 @@ export default function Home() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-  };
-
-  const handleResumeDownload = () => {
-    // Create a dummy PDF link for demonstration
-    const link = document.createElement('a');
-    link.href = '/resume-justus-asogwa.pdf';
-    link.download = 'Justus-Asogwa-Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
   };
 
   return (
@@ -55,13 +48,14 @@ export default function Home() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               
-              <button
-                onClick={handleResumeDownload}
+              <a
+                href={resumePDF}
+                download="Justus-Asogwa-Resume.pdf"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 hover:border-blue-500 dark:hover:border-blue-400"
               >
                 <Download className="mr-2 h-5 w-5" />
                 Download CV
-              </button>
+              </a>
             </div>
             
             {/* Social Links */}
@@ -100,7 +94,7 @@ export default function Home() {
               <div className="w-80 h-80 sm:w-96 sm:h-96 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full p-1">
                 <div className="w-full h-full bg-white dark:bg-gray-900 rounded-full flex items-center justify-center">
                   <img
-                    src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=800"
+                    src={img}
                     alt="Justus Asogwa"
                     className="w-72 h-72 sm:w-88 sm:h-88 object-cover rounded-full"
                   />

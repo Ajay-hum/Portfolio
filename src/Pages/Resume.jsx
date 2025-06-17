@@ -1,16 +1,8 @@
 import React from 'react';
+import resumePDF from "../Assets/resume-justus-asogwa.pdf"
 import { Download, FileText, Star } from 'lucide-react';
 
 export default function Resume() {
-  const handleDownload = () => {
-    // Create a dummy PDF download for demonstration
-    const link = document.createElement('a');
-    link.href = '/resume-justus-asogwa.pdf';
-    link.download = 'Justus-Asogwa-Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   const resumeHighlights = [
     'Frontend Developer with 2+ years experience',
@@ -90,16 +82,17 @@ export default function Resume() {
 
           {/* Download Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
-            <button
-              onClick={handleDownload}
+            <a
+              href={resumePDF}
+              download="Justus-Asogwa-Resume.pdf"
               className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               <Download className="mr-2 h-5 w-5" />
               Download PDF Resume
-            </button>
-            
+            </a>
+   
             <button
-              onClick={() => window.print()}
+              onClick={() => window.open(resumePDF, '_blank')}
               className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 hover:border-blue-500 dark:hover:border-blue-400"
             >
               <FileText className="mr-2 h-5 w-5" />

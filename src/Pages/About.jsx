@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPin, Heart, Code, Lightbulb } from 'lucide-react';
+import img from '../Assets/busyimage.png'
 
 
 export default function About() {
@@ -21,7 +22,7 @@ export default function About() {
           <div className="flex justify-center lg:justify-start" data-aos="fade-right">
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src={img}
                 alt="Justus working"
                 className="w-80 h-96 sm:w-96 sm:h-112 object-cover rounded-2xl shadow-2xl"
               />

@@ -48,8 +48,8 @@ export default function Projects() {
       description: 'Responsive portfolio website with dark/light mode, smooth animations, and contact form integration.',
       image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800',
       technologies: ['React.js', 'Tailwind CSS', 'AOS', 'EmailJS'],
-      github: '#',
-      demo: '#',
+      github: 'https://github.com/Ajay-hum/Portfolio/',
+      demo: 'https://ajay-hum.github.io/Portfolio/',
       featured: false
     },
     {

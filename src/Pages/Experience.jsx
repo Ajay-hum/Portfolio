@@ -17,7 +17,7 @@ export default function Experience() {
     },
     {
       title: 'Team Lead - CurateChain Project',
-      company: 'Personal Project',
+      company: 'Capstone Project',
       period: '2023',
       description: 'Coordinated a 4-person team to build a decentralized social media MVP using React.js and Tailwind CSS.',
       achievements: [
