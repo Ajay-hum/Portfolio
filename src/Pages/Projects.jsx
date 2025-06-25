@@ -2,7 +2,10 @@ import React from 'react';
 import { ExternalLink, Github, Eye } from 'lucide-react';
 
 import curate from "../Assets/crnt.png";
-import encdec from "../Assets/encdec.png"
+import encdec from "../Assets/encdec.png";
+import portfolio from "../Assets/portfolio.png";
+import voiceup from "../Assets/voiceup.png";
+import negass from "../Assets/negass.png";
 
 
 export default function Projects() {
@@ -19,7 +22,7 @@ export default function Projects() {
     {
       title: 'VoiceUp',
       description: 'VoiceUp is an anonymous, AI-powered platform that enables people to report harassment, abuse, bullying, and injustice using emotionally expressive voice and video. It transforms written or spoken experiences into anonymized AI-generated media and stores them securely on IPFS.',
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: voiceup,
       technologies: ['React.js', 'TypeScript', 'Tailwind CSS', 'Supabase'],
       github: '#',
       demo: '#',
@@ -46,7 +49,7 @@ export default function Projects() {
     {
       title: 'Portfolio Website',
       description: 'Responsive portfolio website with dark/light mode, smooth animations, and contact form integration.',
-      image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: portfolio,
       technologies: ['React.js', 'Tailwind CSS', 'AOS', 'EmailJS'],
       github: 'https://github.com/Ajay-hum/Portfolio/',
       demo: 'https://ajay-hum.github.io/Portfolio/',
@@ -55,7 +58,7 @@ export default function Projects() {
     {
       title: 'AI Powered Business Negotiator',
       description: 'An AI-powered business negotiation assistant, that combines natural language processing (NLP) with business intelligence to help users Analyze negotiation scenarios, Generate smart counteroffers, Predict deal outcomes and Suggest persuasive responses in real-time',
-      image: 'https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: negass,
       technologies: ['React.js', 'AI API', 'WebSocket', 'Material-UI'],
       github: '#',
       demo: '#',
