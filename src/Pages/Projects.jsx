@@ -24,7 +24,7 @@ export default function Projects() {
       description: 'VoiceUp is an anonymous, AI-powered platform that enables people to report harassment, abuse, bullying, and injustice using emotionally expressive voice and video. It transforms written or spoken experiences into anonymized AI-generated media and stores them securely on IPFS.',
       image: voiceup,
       technologies: ['React.js', 'TypeScript', 'Tailwind CSS', 'Supabase'],
-      github: '#',
+      github: 'https://github.com/Ajay-hum/voiceup.git',
       demo: '#',
       featured: false
     },
@@ -60,7 +60,7 @@ export default function Projects() {
       description: 'An AI-powered business negotiation assistant, that combines natural language processing (NLP) with business intelligence to help users Analyze negotiation scenarios, Generate smart counteroffers, Predict deal outcomes and Suggest persuasive responses in real-time',
       image: negass,
       technologies: ['React.js', 'AI API', 'WebSocket', 'Material-UI'],
-      github: '#',
+      github: 'https://github.com/Ajay-hum/AI-Neg-Ass.git',
       demo: '#',
       featured: false
     }
